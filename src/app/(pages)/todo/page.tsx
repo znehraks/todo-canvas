@@ -1,8 +1,10 @@
 import { ITodo } from '@/lib/types/todo';
 import Link from 'next/link';
+import { todoWrapper } from './todoStyle.css';
+import { Button } from 'easy-peasy-design';
 
 export default async function TodosPage() {
-  const todosByRouteHandler = await fetch('http://localhost:3002/api/todos', {
+  const todosByRouteHandler = await fetch('http://localhost:3500/api/todos', {
     next: {
       tags: ['todos'],
     },
@@ -21,13 +23,16 @@ export default async function TodosPage() {
   console.log('todosByServerActionData', todosByServerActionData);
 
   return (
-    <div>
+    <div className={todoWrapper}>
+      <Button variant="danger" size="sm">
+        버튼
+      </Button>
       {todosByRouteHandlerData.map((todo) => (
-        <div key={todo.id}>
+        <div className="text-red-500" key={todo.id}>
           <Link href={`/todo/${todo.id}`}>{todo.title}</Link>
         </div>
       ))}
-      <Link href="/todos/create" className="border-gray-200 rounded-md p-2">
+      <Link href="/todo/create" className="border-gray-200 rounded-md p-2">
         Create Todo
       </Link>
     </div>
