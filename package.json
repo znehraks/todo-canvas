@@ -12,7 +12,7 @@
   "dependencies": {
     "@vanilla-extract/css": "^1.16.1",
     "@vanilla-extract/next-plugin": "^2.4.7",
-    "easy-peasy-design": "0.0.1-rc.3-a",
+    "easy-peasy-design": "0.0.1-rc.3-b",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106"

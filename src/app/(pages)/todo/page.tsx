@@ -24,7 +24,7 @@ export default async function TodosPage() {
 
   return (
     <div className={todoWrapper}>
-      <Button variant="danger" size="sm">
+      <Button className="w-24" variant="solid" color="blue" size="md">
         버튼
       </Button>
       {todosByRouteHandlerData.map((todo) => (
